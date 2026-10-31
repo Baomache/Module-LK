@@ -1,0 +1,10 @@
+#!name=Locket Custom Edition - Safe
+#!desc=Caption customization for Locket.
+
+[General]
+
+[MITM]
+hostname = %APPEND% firebaseremoteconfig.googleapis.com
+
+[Script]
+locket_caption_safe = type=http-response,pattern=^https:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/locket-[^?]+,script-path=https://raw.githubusercontent.com/Baomache/Module-LK/main/locket_caption_safe.js,requires-body=true,max-size=524288,timeout=10
